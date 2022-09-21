@@ -7,7 +7,7 @@ public class Three {
         String answer = "";
         int m = Integer.MIN_VALUE;
         //띄어쓰기로 분리  문장을 문자열 배열로
-        String[] s = str.split(" ");
+        String[] s = str.split(" "); // 띄어쓰기를 바탕으로 문장을 단어로
 
         for (String x : s) {
             int len = x.length();
