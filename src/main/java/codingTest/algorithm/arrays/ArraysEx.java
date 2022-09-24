@@ -35,6 +35,16 @@ public class ArraysEx {
         }
 
 
+        char[] chArr = {'e','a', 'c','b','d'};
+        System.out.println(Arrays.toString(chArr));
+        System.out.println(Arrays.binarySearch(chArr,'a')); // 오류
+        //반드시 이진 탐색(binarySearch)을 할때에는 sort를 먼저해주어야한다
+        Arrays.sort(chArr);
+        System.out.println(Arrays.toString(chArr));
+        System.out.println(Arrays.binarySearch(chArr,'c'));
+
+
+
     }
 
 
