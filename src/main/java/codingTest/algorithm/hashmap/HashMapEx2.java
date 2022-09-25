@@ -23,6 +23,7 @@ public class HashMapEx2 {
             }
         }
 
+        //iterator는 collection인터페이스를 상속받은 것만 가능하다.
         Iterator<Map.Entry<String, Integer>> it = map.entrySet().iterator();
 
         while (it.hasNext()) {
