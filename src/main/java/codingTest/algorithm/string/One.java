@@ -28,7 +28,7 @@ public class One {
         str = str.toUpperCase();
         t = Character.toUpperCase(t); // 문자는 Character라는 클래스로 이용해주어야한다.
 
-        //빠른 for문 배열 아니면 collectionframeWork가 와야지 String 은안된다
+        //빠른 for문 ->배열 아니면 collectionframeWork가 와야지 String 은안된다
         //그래서 .toCharArray()을 해주어서 문자열을 문자 배열로 만들어준다
         for (char x : str.toCharArray()) {
             if(x==t){

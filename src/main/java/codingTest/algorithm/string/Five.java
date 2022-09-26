@@ -17,7 +17,7 @@ import java.util.Scanner;
         54321*/
 public class Five {
 
-    public int sum(int count,String math){
+  /*  public int sum(int count,String math){
         int sum=0;
         for (int i = 0; i < count ; i++) {
             sum += math.charAt(i)-48;
@@ -25,6 +25,17 @@ public class Five {
             // -48 또는 -'0' 을 해주어야 우리가 입력받은 숫자 값(진짜 숫자)을 반환
         }
         return sum;
+    }*/
+
+
+    public int sum(int count,String math){
+        int sum = 0;
+        for (int i = 0; i < count; i++) {
+            int value = math.charAt(i) - 48;
+            sum += value;
+        }
+        return sum;
+
     }
 
 
