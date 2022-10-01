@@ -28,6 +28,26 @@ public class Five {
 
     public int[] solution(int n, int[] arr) {
         int[] answer = new int[n];
+        int max = Integer.MIN_VALUE;
+
+        for (int i = 0; i < n ; i++) {
+            int cnt = 1;
+            for (int j = 0; j < n; j++) {
+                if (arr[j] > arr[i]) {
+                    cnt++; // 등수
+                }
+            }
+            answer[i] = cnt;
+        }
+        return answer;
+
+    }
+
+
+
+
+   /* public int[] solution(int n, int[] arr) {
+        int[] answer = new int[n];
 
         for (int i = 0; i < arr.length ; i++) {
             int cnt = 1;
@@ -39,7 +59,7 @@ public class Five {
             answer[i] = cnt;
         }
         return answer;
-    }
+    }*/
 
 
     public static void main(String[] args) {
