@@ -9,7 +9,7 @@ import java.util.Stack;
 public class One {
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+     /*   Scanner sc = new Scanner(System.in);
 
         int num = sc.nextInt();
         Stack<Character> stack = new Stack<>(); // stack에는 문자를 입력해줅것
@@ -32,9 +32,35 @@ public class One {
 
         sc.close();
         return;
-    }
+    }*/
+
+
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        Stack<Character> stack = new Stack<>();
+
+        while (num-- > 0) {
+            String str = sc.nextLine() + " ";
+
+            for (int i = 0; i < str.length(); i++) {
+
+                    if (str.charAt(i) == ' ') {
+                     while(!stack.isEmpty()) {
+                         System.out.print(stack.pop());
+                         //빼낼것
+                     }
+                        System.out.print(" ");
+                    }else{
+                        stack.push(str.charAt(i));
+                    }
+
+                }
+            }
+        }
+
 
     }
+
 
 
 
