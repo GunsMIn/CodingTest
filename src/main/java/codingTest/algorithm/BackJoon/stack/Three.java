@@ -1,10 +1,9 @@
 package codingTest.algorithm.BackJoon.stack;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
-import java.util.Scanner;
+import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.LongStream;
 import java.util.stream.Stream;
 
 /*괄호가 입력되면 올바른 괄호이면 “YES", 올바르지 않으면 ”NO"를 출력합니다.
@@ -24,21 +23,14 @@ NO*/
 public class Three {
 
 
+
     public static void main(String[] args) {
 
 
-        Stream<String> builderStream = Stream.<String>builder().add("Eric").add("Elena").add("Hava")
-                .build();
-
-
-        List<String> collect = builderStream.collect(Collectors.toList());
-        for (String s : collect) {
-            System.out.println(s);
-        }
-
-
-
-
+        int sum = IntStream.rangeClosed(1, 10).sum();
+        long count = IntStream.rangeClosed(1, 10).count();
+        System.out.println(sum);
+        System.out.println("count = " + count);
 
     }
 }
