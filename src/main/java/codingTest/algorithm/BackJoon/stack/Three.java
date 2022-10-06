@@ -21,16 +21,30 @@ import java.util.stream.Stream;
 예시 출력 1
 NO*/
 public class Three {
-
-
+    public String solution(String str) {
+        String answer = "YES";
+        Stack<Character> stack = new Stack<>();
+        for (int i = 0; i < str.length(); i++) {
+            char c = str.charAt(i);
+            if (c == '(') {
+                stack.push(c);
+            } else{
+                if (stack.isEmpty()) { // ')' 가 더 많은 경우
+                    answer = "NO";
+                }
+                stack.pop();
+            }
+        }
+        if (!stack.isEmpty()) { // '('가 더 많은 경우
+            answer = "NO";
+        }
+        return answer;
+    }
 
     public static void main(String[] args) {
-
-
-        int sum = IntStream.rangeClosed(1, 10).sum();
-        long count = IntStream.rangeClosed(1, 10).count();
-        System.out.println(sum);
-        System.out.println("count = " + count);
-
+        Three t = new Three();
+        Scanner sc = new Scanner(System.in);
+        String str = sc.next();
+        System.out.println( t.solution(str));
     }
 }
