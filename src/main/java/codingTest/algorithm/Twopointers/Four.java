@@ -24,7 +24,7 @@ N개의 수로 이루어진 수열이 주어집니다.
 3*/
 public class Four {
 
-    public int solution(int n, int m, int[] a) {
+   /* public int solution(int n, int m, int[] a) {
         int answer = 0; //cnt
         int sum = 0;
         int lt = 0;
@@ -42,6 +42,25 @@ public class Four {
             }
         }
         return answer;
+    }*/
+
+    public int solution(int n, int m, int[] a) {
+        int cnt = 0;
+        int sum = 0;
+        int lt = 0;
+        for (int i = 0; i < n; i++) {
+            sum += a[i];
+            if (sum == m) {
+                cnt++;
+            }
+            while (sum > m) {
+                sum -= a[lt++];
+                if (sum == m) {
+                    cnt++;
+                }
+            }
+        }
+        return cnt;
     }
 
 

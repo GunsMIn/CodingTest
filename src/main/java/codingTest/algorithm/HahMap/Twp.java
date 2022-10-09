@@ -68,6 +68,19 @@ public class Twp {
     }
 
 
+    public String solution2(String a,String b) {
+        String answer = "Yes";
+        for (char a1 : a.toCharArray()) {
+
+        }
+
+
+
+        return answer;
+    }
+
+
+
     public static void main(String[] args) {
         Twp T = new Twp();
         Scanner kb = new Scanner(System.in);

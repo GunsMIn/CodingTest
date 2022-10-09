@@ -36,7 +36,7 @@ import java.util.Scanner;
 public class One {
 
 
-    public char solution(int n,String str) {
+    /*public char solution(int n,String str) {
         char answer = ' ';
         int max = Integer.MIN_VALUE;
         Map<Character, Integer> map = new HashMap<>();
@@ -52,6 +52,25 @@ public class One {
             }
         }
 
+        return answer;
+    }*/
+
+    public char solution(int n,String str) {
+        char answer = ' ';
+        int max = Integer.MIN_VALUE;
+        Map<Character, Integer> store = new HashMap<>();
+
+        for (char c : str.toCharArray()) {
+            store.put(c, store.getOrDefault(c, 0) + 1);
+        }
+
+        for (char x : store.keySet()) {
+            int value = store.get(x);
+            if (value > max) {
+                max = value;
+                answer = x;
+            }
+        }
         return answer;
     }
 
