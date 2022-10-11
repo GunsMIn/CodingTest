@@ -9,7 +9,7 @@ public class Three {
         int answer = 0;
         Stack<Integer> stack = new Stack<>();
         for (int move : moves) { //moves배열은 크레인이 도는 배열 따라서 -1을 해줘야 배열을 돈다.
-            for (int i = 0; i < board.length; i++) {//
+            for (int i = 0; i < board.length; i++) {//크레인이 계속 내려가야하니까 행 ++ 해주어야한다.
                 if (board[i][move - 1] != 0) { //0이 아닐때가 인형이 있을때이다.
                     int tmp = board[i][move - 1];
                     board[i][move - 1]=0;//뽑았으니까 0으로 만들어준다
