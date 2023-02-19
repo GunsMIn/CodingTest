@@ -17,5 +17,6 @@ public class Append {
         //sb2에서 숫자지우기
         sb2.delete(3, 6);
         System.out.println("sb2 = " + sb2);
+        //
     }
 }

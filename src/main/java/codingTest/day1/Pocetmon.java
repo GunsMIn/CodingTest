@@ -1,4 +1,4 @@
-package codingTest;
+package codingTest.day1;
 
 import java.util.HashSet;
 import java.util.Set;
